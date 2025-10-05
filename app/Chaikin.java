@@ -35,6 +35,10 @@ public class Chaikin {
     }
 
     public ArrayList<Point> generateStepPoints(ArrayList<Point> controlPoints, int step) {
+
+        if (step <= 0) {
+            return new ArrayList<>(controlPoints);
+        }
         ArrayList<Point> current = new ArrayList<>(controlPoints);
         System.out.println(step);
         for (int i = 0; i < step && current.size() >= 2; i++) {

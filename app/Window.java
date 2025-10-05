@@ -19,7 +19,7 @@ public class Window extends JFrame {
 
     public final int POINT_RADIUS = 6;
     public final int MAX_STEPS = 7;
-    public final int ANIMATION_DELAY = 800;
+    public final int ANIMATION_DELAY = 1200;
 
     public Window() {
         controlPoints = new ArrayList<>();
@@ -111,7 +111,7 @@ public class Window extends JFrame {
         isAnimating = !isAnimating;
 
         if (isAnimating) {
-            currentStep = 1;
+            currentStep = 0;
             startAnimation();
         } else {
             stopAnimation();

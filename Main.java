@@ -1,4 +1,3 @@
-
 import app.Window;
 
 public class Main {
