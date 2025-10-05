@@ -66,7 +66,7 @@ public class Window extends JFrame {
     private void handleKeyPress(KeyEvent e) {
         switch (e.getKeyCode()) {
             case KeyEvent.VK_ENTER -> {
-                if (controlPoints.size() > 2) {
+                if (controlPoints.size() >= 2) {
                     isDrowing = true;
                     toggleAnimation();
                 }
@@ -112,7 +112,9 @@ public class Window extends JFrame {
 
         if (isAnimating) {
             currentStep = 0;
-            startAnimation();
+            if (controlPoints.size() > 2) {
+                startAnimation();
+            }
         } else {
             stopAnimation();
         }
